@@ -2,10 +2,10 @@ import mongoose from "mongoose";
 
 const autorSchema = new mongoose.Schema({
    id: { type: mongoose.Schema.Types.ObjectId },
-   autor: { type: String, required: true },
+   nome: { type: String, required: true },
    nacionalidade: { type: String }
 }, { versionKey: false });
 
-const autor = mongoose.model("autor", autorSchema);
+const autor = mongoose.model("autores", autorSchema);
 
-export default { autor, autorSchema };
+export { autor, autorSchema };
